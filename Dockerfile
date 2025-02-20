@@ -1,12 +1,15 @@
 FROM ubuntu:latest
 
-# Install dependencies
+# Install dependencies dengan opsi tambahan
 RUN apt update && apt install -y \
     firefox \
     x11vnc \
     xvfb \
     fluxbox \
+    net-tools \
+    x11-utils \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Buat direktori kerja
 WORKDIR /root
